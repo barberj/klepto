@@ -1,0 +1,5 @@
+FROM nginx
+
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY simple_api.crt /etc/ssl/simple_api.crt
+COPY simple_api.key /etc/ssl/simple_api.key
