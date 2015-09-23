@@ -1,7 +1,7 @@
 # Build Machine
-$`docker-machine create --driver digitalocean --digitalocean-access-token <REDACTED> do`  
-$`docker-machine env do`  
-$`eval "$(docker-machine env do)"`
+$`docker-machine create --driver digitalocean --digitalocean-access-token $DIGITALOCEAN klepto`  
+$`docker-machine env klepto`  
+$`eval "$(docker-machine env klepto)"`
 
 # Build Images
 $`docker build -t klepto .`  

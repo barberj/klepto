@@ -17,7 +17,6 @@ class AuditRequestsController < ApplicationController
   end
 
   def process(action, *args)
-    audit_request
-    render plain: request.env.inspect
+    render json: { id: audit_request.id }
   end
 end
