@@ -17,11 +17,11 @@ ActiveRecord::Schema.define(version: 20150921125426) do
   enable_extension "plpgsql"
 
   create_table "requests", force: :cascade do |t|
-    t.string   "url",                     null: false
     t.string   "method",                  null: false
+    t.string   "url",                     null: false
     t.json     "headers",    default: {}
-    t.json     "body",       default: {}
     t.json     "query",      default: {}
+    t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
