@@ -83,6 +83,4 @@ test:
 #
 production:
   <<: *default
-  database: klepto_production
-  username: klepto
-  password: <%= ENV['KLEPTO_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
