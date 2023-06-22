@@ -1,2 +1,2 @@
-class Request < ActiveRecord::Base
+class Request < ApplicationRecord
 end
