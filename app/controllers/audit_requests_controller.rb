@@ -8,7 +8,8 @@ class AuditRequestsController < ApplicationController
       url: request.url,
       headers: request_headers,
       query: request.query_parameters,
-      body: request.raw_post
+      body: request.raw_post,
+      raw_params: params.except("action", "controller")
     )
   end
 
